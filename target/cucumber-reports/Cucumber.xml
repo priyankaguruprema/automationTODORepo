@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="13.834">
+<testcase classname="Test the functionality of the Todo page" name="Verify the layout of the Todo page" time="13.124">
+<system-out><![CDATA[Given Todo url..............................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

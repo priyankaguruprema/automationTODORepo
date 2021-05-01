@@ -1,0 +1,59 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-05-01T19:48:05.041Z",
+        "before": [
+          {
+            "result": {
+              "duration": 11000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.Singtel.TodoAutomation.stepDef.TodoPage.before(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Verify the layout of the Todo page",
+        "description": "",
+        "id": "test-the-functionality-of-the-todo-page;verify-the-layout-of-the-todo-page;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "embeddings": [
+              {
+                "data": "dGVzdGluZw\u003d\u003d",
+                "mime_type": "text/plain",
+                "name": "adding string to report"
+              }
+            ],
+            "result": {
+              "duration": 12759000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Todo url",
+            "match": {
+              "location": "com.Singtel.TodoAutomation.stepDef.TodoPage.todo_url()"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Positive"
+          }
+        ]
+      }
+    ],
+    "name": "Test the functionality of the Todo page",
+    "description": "",
+    "id": "test-the-functionality-of-the-todo-page",
+    "keyword": "Feature",
+    "uri": "file:resource/features/Todo.feature",
+    "tags": []
+  }
+]
