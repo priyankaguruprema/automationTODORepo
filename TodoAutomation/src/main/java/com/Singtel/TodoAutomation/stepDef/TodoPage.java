@@ -22,7 +22,7 @@ public class TodoPage {
 	public void todo_url()  throws InterruptedException, IOException {
 		loadProperties();
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Dileepa\\workspace\\TodoAutomation\\resource\\drivers\\chromedriver.exe");
+				"resource\\drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		String baseUrl = getProperties("todoUrl");
 		logger.info("*********************************baseUrl******************************************"+baseUrl);

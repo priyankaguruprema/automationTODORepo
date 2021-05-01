@@ -12,7 +12,7 @@ public class PropertyLoader {
 	
 	
 	public static void loadProperties() throws IOException {
-	String	filepath = "C:\\Users\\Dileepa\\workspace\\TodoAutomation\\resource\\properties\\application.properties";
+	String	filepath = "resource\\properties\\application.properties";
 	logger.info("*********************************loading application property file******************************************");
 			FileInputStream in = new FileInputStream(filepath);
 			utilsProp.load(in);
