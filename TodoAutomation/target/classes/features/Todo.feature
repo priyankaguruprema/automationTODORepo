@@ -13,9 +13,10 @@ Feature: Test the functionality of the Todo page
 	Then verify the options under "Community" 
 	And verify the doble click, written by and part of
 	When enter "<given todo name>" in what needs to be done field	
-	Then read the entered todo name 
-	And verify all hyperlinks on the Todo page by clicking each hyper link
+	Then verify all hyperlinks on the Todo page are present
+	And verify all hyperlinks on the Todo page by clicking on each hyper link
 		Examples:
 			|given todo name|
-			|Todo Name 1|
+			|Todo Name 1    |
+			|Todo Name 2    |
 		

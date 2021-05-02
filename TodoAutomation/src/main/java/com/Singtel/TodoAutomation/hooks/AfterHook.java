@@ -16,11 +16,11 @@ public class AfterHook {
 	public void beforeStep(  ) throws IOException {
 		if(driver!=null && scenario.isFailed()) {
 			takesnapshot();
-			logger.info("*********************************closing teh browser******************************************");
+			logger.info("*********************************closing the browser******************************************");
 			}
 		if(driver!=null) {
 		driver.quit();		
-		logger.info("*********************************closing teh browser******************************************");
+		logger.info("*********************************closing the browser******************************************");
 		}
 		
 		
