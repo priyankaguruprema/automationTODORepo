@@ -1,0 +1,5 @@
+#Created by .ignore support 
+##Java template
+*.class
+*.log
+/target/

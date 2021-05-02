@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="181.306">
+<testcase classname="Test the functionality of the Todo page" name="Verify the layout of the Todo page" time="134.348">
+<system-out><![CDATA[Given Todo page url.........................................................passed
+Given mvc user with all privileges to access todo page......................passed
+When navigate to todo page..................................................passed
+Then verify the todo page title.............................................passed
+Then verify the content under source........................................passed
+Then verify the options under "Official Resources"..........................passed
+Then verify the options under "Community"...................................passed
+And verify the doble click, written by and part of..........................passed
+When enter "Todo Name 1" in what needs to be done field.....................passed
+Then verify all hyperlinks on the Todo page are present.....................passed
+And verify all hyperlinks on the Todo page by clicking on each hyper link...passed
+]]></system-out>
+</testcase>
+<testcase classname="Test the functionality of the Todo page" name="Verify the creation of Todo on todo page" time="9.877">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() ='create']&quot;}&#10;  (Session info: chrome=90.0.4430.93)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'&#10;System info: host: 'DILEEPA-PC', ip: '192.168.109.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}), userDataDir=C:\Users\Dileepa\AppData\Local\Temp\scoped_dir1120_1376872842}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64203}, acceptInsecureCerts=false, browserVersion=90.0.4430.93, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]&#10;Session ID: 7c0835974636e9581c7e22d277f5134b&#10;*** Element info: {Using=xpath, value=//*[text() ='create']}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given Todo page url.........................................................passed
+Given mvc user with all privileges to access todo page......................passed
+When navigate to todo page..................................................passed
+Then verify the todo page title.............................................passed
+When enter "Todo Name 1" in what needs to be done field.....................passed
+Then click on create todo button............................................failed
+And verify the new todo item is created.....................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text() ='create']"}
+  (Session info: chrome=90.0.4430.93)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'DILEEPA-PC', ip: '192.168.109.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}), userDataDir=C:\Users\Dileepa\AppData\Local\Temp\scoped_dir1120_1376872842}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64203}, acceptInsecureCerts=false, browserVersion=90.0.4430.93, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: 7c0835974636e9581c7e22d277f5134b
+*** Element info: {Using=xpath, value=//*[text() ='create']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:518)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at com.Singtel.TodoAutomation.utilities.DriverUtltils.getElementText(DriverUtltils.java:46)
+	at com.Singtel.TodoAutomation.stepDef.TodoPage.click_on_create_todo_button(TodoPage.java:173)
+	at ✽.click on create todo button(file:///C:/Users/Dileepa/workspace/singtel/automationTODORepo/TodoAutomation/resource/features/Todo.feature:32)
+]]></failure>
+</testcase>
+<testcase classname="Test the functionality of the Todo page" name="Verify the update of todo item on todo page" time="8.488">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() ='exiting']&quot;}&#10;  (Session info: chrome=90.0.4430.93)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'&#10;System info: host: 'DILEEPA-PC', ip: '192.168.109.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}), userDataDir=C:\Users\Dileepa\AppData\Local\Temp\scoped_dir10320_1694182891}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64228}, acceptInsecureCerts=false, browserVersion=90.0.4430.93, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]&#10;Session ID: f9fbf70e371fda783f12c98d46c579ff&#10;*** Element info: {Using=xpath, value=//*[text() ='exiting']}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given Todo page url.........................................................passed
+Given mvc user with all privileges to access todo page......................passed
+When navigate to todo page..................................................passed
+Then verify the todo page title.............................................passed
+Then click on edit button of "Todo Name 1" item.............................failed
+And verify the todo item is in edit mode....................................skipped
+When perform edit...........................................................skipped
+And click on save button....................................................skipped
+Then existing todo item is updated with the latest changes..................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text() ='exiting']"}
+  (Session info: chrome=90.0.4430.93)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'DILEEPA-PC', ip: '192.168.109.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}), userDataDir=C:\Users\Dileepa\AppData\Local\Temp\scoped_dir10320_1694182891}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64228}, acceptInsecureCerts=false, browserVersion=90.0.4430.93, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: f9fbf70e371fda783f12c98d46c579ff
+*** Element info: {Using=xpath, value=//*[text() ='exiting']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:518)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at com.Singtel.TodoAutomation.utilities.DriverUtltils.getElementText(DriverUtltils.java:46)
+	at com.Singtel.TodoAutomation.stepDef.TodoPage.click_on_edit_button_of_item(TodoPage.java:183)
+	at ✽.click on edit button of "Todo Name 1" item(file:///C:/Users/Dileepa/workspace/singtel/automationTODORepo/TodoAutomation/resource/features/Todo.feature:45)
+]]></failure>
+</testcase>
+<testcase classname="Test the functionality of the Todo page" name="Verify the delete of todo item on todo page" time="9.841">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() ='exiting']&quot;}&#10;  (Session info: chrome=90.0.4430.93)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'&#10;System info: host: 'DILEEPA-PC', ip: '192.168.109.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}), userDataDir=C:\Users\Dileepa\AppData\Local\Temp\scoped_dir13476_1194117995}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64252}, acceptInsecureCerts=false, browserVersion=90.0.4430.93, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]&#10;Session ID: b33af9ddaed6a7cacf47970956d48810&#10;*** Element info: {Using=xpath, value=//*[text() ='exiting']}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given Todo page url.........................................................passed
+Given mvc user with all privileges to access todo page......................passed
+When navigate to todo page..................................................passed
+Then verify the todo page title.............................................passed
+And verify there are some existing todo items...............................passed
+When enter "<given todo name>" in what needs to be done field...............passed
+Then click on delete button of "Todo Name 1" item...........................failed
+And verify the delete todo item pop up appears..............................skipped
+When click on confirm delete button.........................................skipped
+Then existing todo item is deleted from the list............................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text() ='exiting']"}
+  (Session info: chrome=90.0.4430.93)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'DILEEPA-PC', ip: '192.168.109.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}), userDataDir=C:\Users\Dileepa\AppData\Local\Temp\scoped_dir13476_1194117995}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64252}, acceptInsecureCerts=false, browserVersion=90.0.4430.93, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: b33af9ddaed6a7cacf47970956d48810
+*** Element info: {Using=xpath, value=//*[text() ='exiting']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:518)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at com.Singtel.TodoAutomation.utilities.DriverUtltils.getElementText(DriverUtltils.java:46)
+	at com.Singtel.TodoAutomation.stepDef.TodoPage.click_on_delete_button_of_item(TodoPage.java:212)
+	at ✽.click on delete button of "Todo Name 1" item(file:///C:/Users/Dileepa/workspace/singtel/automationTODORepo/TodoAutomation/resource/features/Todo.feature:64)
+]]></failure>
+</testcase>
+<testcase classname="Test the functionality of the Todo page" name="Verify the multiple creation of todo items" time="8.413">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text() ='exiting']&quot;}&#10;  (Session info: chrome=90.0.4430.93)&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'&#10;System info: host: 'DILEEPA-PC', ip: '192.168.109.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}), userDataDir=C:\Users\Dileepa\AppData\Local\Temp\scoped_dir17172_497358879}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64278}, acceptInsecureCerts=false, browserVersion=90.0.4430.93, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]&#10;Session ID: d12cb3998abf98125b6e768ec3a79d81&#10;*** Element info: {Using=xpath, value=//*[text() ='exiting']}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given Todo page url.........................................................passed
+Given mvc user with all privileges to access todo page......................passed
+When navigate to todo page..................................................passed
+Then verify the todo page title.............................................passed
+And verify there are some existing todo item................................failed
+When enter "Todo Name 1" in what needs to be done field.....................skipped
+Then click on create todo button............................................skipped
+And verify the new todo item is created.....................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text() ='exiting']"}
+  (Session info: chrome=90.0.4430.93)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
+System info: host: 'DILEEPA-PC', ip: '192.168.109.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}), userDataDir=C:\Users\Dileepa\AppData\Local\Temp\scoped_dir17172_497358879}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:64278}, acceptInsecureCerts=false, browserVersion=90.0.4430.93, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: d12cb3998abf98125b6e768ec3a79d81
+*** Element info: {Using=xpath, value=//*[text() ='exiting']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:518)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at com.Singtel.TodoAutomation.utilities.DriverUtltils.getElementText(DriverUtltils.java:46)
+	at com.Singtel.TodoAutomation.stepDef.TodoPage.verify_there_are_some_existing_todo_item(TodoPage.java:231)
+	at ✽.verify there are some existing todo item(file:///C:/Users/Dileepa/workspace/singtel/automationTODORepo/TodoAutomation/resource/features/Todo.feature:78)
+]]></failure>
+</testcase>
+<testcase classname="Test the functionality of the Todo page" name="Verify only mvc user can access todo page but not the non MVC user" time="8.92">
+<failure message="Title doesnt match" type="java.lang.AssertionError"><![CDATA[Given Todo page url.........................................................passed
+Given mvc user with all privileges to access todo page......................passed
+When navigate to todo page..................................................passed
+Then verify the todo page title.............................................passed
+Given non mvc user without all privileges to access todo page...............passed
+When navigate to todo page with non mvc user................................passed
+Then verify the todo page title doesnt match with the expectation...........failed
+
+StackTrace:
+java.lang.AssertionError: Title doesnt match
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:26)
+	at com.Singtel.TodoAutomation.stepDef.TodoPage.verify_the_todo_page_title_doesnt_match_with_the_expectation(TodoPage.java:253)
+	at ✽.verify the todo page title doesnt match with the expectation(file:///C:/Users/Dileepa/workspace/singtel/automationTODORepo/TodoAutomation/resource/features/Todo.feature:93)
+]]></failure>
+</testcase>
+</testsuite>
