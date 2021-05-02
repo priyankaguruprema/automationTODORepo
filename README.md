@@ -11,6 +11,7 @@ Hooks are used before and after scenario
 Refer Todo feature for scenarios
 refer pom.xml file for used dependies
 utilities are used for code reusablity 
+respective elements has been highlighted during the run
 
 
 execution steps : prerequisite : JDK (1.8) Maven(3.3  and above) 
