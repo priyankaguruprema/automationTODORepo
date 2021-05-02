@@ -38,9 +38,6 @@ public class DriverUtltils {
 	public static void takesnapshot() throws IOException {
 		String fileWithPath = "target\\screenShots";
 		TakesScreenshot scrShot = ((TakesScreenshot) driver);
-		File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
-		File DestFile = new File(fileWithPath);
-		FileUtils.copyFile(SrcFile, DestFile);
 		scenario.attach(scrShot.getScreenshotAs(OutputType.BYTES), "image/png", "Attachment");
 
 	}

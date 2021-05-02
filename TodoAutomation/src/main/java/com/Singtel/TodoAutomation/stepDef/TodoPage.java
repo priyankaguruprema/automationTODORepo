@@ -45,13 +45,13 @@ public class TodoPage {
 
 	@Then("verify the todo page title")
 	public void verify_the_todo_page_title() {
-		scenario.log("Todo page title is \n"+driver.getTitle());
+		scenario.log("Todo page title is \n" + driver.getTitle());
 		assertThat("Title doesnt match", driver.getTitle().equals("Vue.js • TodoMVC"));
 	}
 
 	@Then("verify the content under source")
 	public void verify_the_content_under_source() throws IOException {
-		scenario.log("Content under source is \n"+ getElementText(quote));
+		scenario.log("Content under source is \n" + getElementText(quote));
 		highLighterMethod(quote);
 		assertThat("content under source doesnt match", getElementText(quote).equals(
 				"Vue.js provides efficient MVVM data bindings with a simple and flexible API. It uses plain JavaScript object models, DOM-based templating and extendable directives and filters."));
@@ -117,11 +117,10 @@ public class TodoPage {
 	@When("enter {string} in what needs to be done field")
 	public void enter_in_what_needs_to_be_done_field(String string) throws IOException {
 		highLighterMethod(todoName);
-		typeInElement(todoName,string);
+		typeInElement(todoName, string);
 		highLighterMethod(todoName);
 	}
 
-	
 	@Then("verify all hyperlinks on the Todo page are present")
 	public void verify_all_hyperlinks_on_the_todo_page_are_present() throws IOException {
 		scenario.log("List of all hyperlinks on the Todo page");
@@ -139,35 +138,119 @@ public class TodoPage {
 		expected.add("Discussions on GitHub");
 		expected.add("let us know");
 		expected.add("Evan You");
-		expected.add("TodoMVC");		
+		expected.add("TodoMVC");
 
 		for (int loop = 0; loop < 12; loop++) {
 			actual.add((hyperlink.get(loop)).getText());
 			logger.info("******************actual  *********" + actual.get(loop));
 			scenario.log(actual.get(loop));
 		}
-		
+
 		assertThat("Hyperlink doesnt match", actual.equals(expected));
 	}
+
 	@Then("verify all hyperlinks on the Todo page by clicking on each hyper link")
 	public void verify_all_hyperlinks_on_the_todo_page_by_clicking_on_each_hyper_link() throws IOException {
 		scenario.log("Each hyperlinks on the Todo page are opened and title of navigated page is validated");
 		for (int loop = 0; loop < 12; loop++) {
 			List<WebElement> hyperlink = driver.findElements(hyperlinks);
-			scenario.log("Clicking on hyperlink : "+hyperlink.get(loop).getText());
+			scenario.log("Clicking on hyperlink : " + hyperlink.get(loop).getText());
 			highLighterMethod(hyperlink.get(loop));
 			clickElement(hyperlink.get(loop));
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 			takesnapshot();
 			assertThat("Title doesnt match", !driver.getTitle().equals("Vue.js • TodoMVC"));
 			driver.navigate().back();
-			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 			assertThat("Title doesnt match", driver.getTitle().equals("Vue.js • TodoMVC"));
 			takesnapshot();
 		}
-		
-		
-		
+
+	}
+
+	@Then("click on create todo button")
+	public void click_on_create_todo_button() {
+		assertThat("There is no create todo button", getElementText(create).equals("create"));
+	}
+
+	@Then("verify the new todo item is created")
+	public void verify_the_new_todo_item_is_created() {
+
+	}
+
+	@Then("click on edit button of {string} item")
+	public void click_on_edit_button_of_item(String string) {
+		assertThat("There is no existing todo items", getElementText(existing).equals("existing"));
+	}
+
+	@Then("verify the todo item is in edit mode")
+	public void verify_the_todo_item_is_in_edit_mode() {
+
+	}
+
+	@When("perform edit")
+	public void perform_edit() {
+		assertThat("There is no edit todo button", getElementText(edit).equals("edit"));
+	}
+
+	@When("click on save button")
+	public void click_on_save_button() {
+	}
+
+	@Then("existing todo item is updated with the latest changes")
+	public void existing_todo_item_is_updated_with_the_latest_changes() {
+
+	}
+
+	@Then("verify there are some existing todo items")
+	public void verify_there_are_some_existing_todo_items() {
+
+	}
+
+	@Then("click on delete button of {string} item")
+	public void click_on_delete_button_of_item(String string) {
+		assertThat("There is no existing todo items", getElementText(existing).equals("existing"));
+	}
+
+	@Then("verify the delete todo item pop up appears")
+	public void verify_the_delete_todo_item_pop_up_appears() {
+
+	}
+
+	@When("click on confirm delete button")
+	public void click_on_confirm_delete_button() {
+
+	}
+
+	@Then("existing todo item is deleted from the list")
+	public void existing_todo_item_is_deleted_from_the_list() {
+
+	}
+	@Then("verify there are some existing todo item")
+	public void verify_there_are_some_existing_todo_item() {
+		assertThat("There is no existing todo items", getElementText(existing).equals("existing"));
+	}
+	
+	@Given("non mvc user without all privileges to access todo page")
+	public void non_mvc_user_without_all_privileges_to_access_todo_page() {
+		// Assuming as non mvc user should fail.. the naviagtion
+				scenario.log("Non MVC user without privileges to access TODO page has been given ");
+				
+	}
+
+
+
+	@When("navigate to todo page with non mvc user")
+	public void navigate_to_todo_page_with_non_mvc_user() throws IOException {
+		String baseUrl = getProperties("todoUrl");
+		logger.info("*********************************baseUrl******************************************" + baseUrl);
+		scenario.log("Navigating to TODO page ");
+		driver.get(baseUrl+"withNonMVC");
+		takesnapshot();
+	}
+	@Then("verify the todo page title doesnt match with the expectation")
+	public void verify_the_todo_page_title_doesnt_match_with_the_expectation() {
+		assertThat("Title doesnt match", driver.getTitle().equals("Vue.js • TodoMVC"));
 	}
 
 }

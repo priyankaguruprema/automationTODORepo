@@ -11,4 +11,9 @@ public class TodoLocator {
 	public static By middle = By.xpath("//*[@class='info']//child::p");
 	public static By todoName = By.xpath("//*[@placeholder='What needs to be done?']");
 
+	
+	public static By create = By.xpath("//*[text() ='create']");
+	public static By existing = By.xpath("//*[text() ='exiting']");
+	public static By edit = By.xpath("//*[text() ='edit']");
+	public static By delete = By.xpath("//*[text() ='delete']");
 }
