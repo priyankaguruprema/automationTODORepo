@@ -1,6 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="14.351">
-<testcase classname="Test the functionality of the Todo page" name="Verify the layout of the Todo page" time="13.684">
-<system-out><![CDATA[Given Todo url..............................................................passed
-]]></system-out>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.543">
+<testcase classname="Test the functionality of the Todo page" name="Verify the layout of the Todo page" time="24.41">
+<failure message="Vue.js • TodoMVC" type="java.lang.AssertionError"><![CDATA[Given Todo page url.........................................................passed
+Given mvc user with all privileges to access todo page......................passed
+When navigate to todo page..................................................passed
+Then verify the todo page title.............................................failed
+Then verify the content under source........................................skipped
+Then verify the options under "Official Resources"..........................skipped
+Then verify the options under "Community"...................................skipped
+And verify the doble click, written by and part of..........................skipped
+When enter "Todo Name 1" in what needs to be done field.....................skipped
+Then read the entered todo name.............................................skipped
+And verify all hyperlinks on the Todo page by clicking each hyper link......skipped
+
+StackTrace:
+java.lang.AssertionError: Vue.js • TodoMVC
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:26)
+	at com.Singtel.TodoAutomation.stepDef.TodoPage.verify_the_todo_page_title(TodoPage.java:41)
+	at ✽.verify the todo page title(file:///C:/Users/Dileepa/workspace/singtel/automationTODORepo/TodoAutomation/resource/features/Todo.feature:10)
+]]></failure>
 </testcase>
 </testsuite>
